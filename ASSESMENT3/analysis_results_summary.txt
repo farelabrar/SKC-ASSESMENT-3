@@ -1,0 +1,57 @@
+Log Analysis Summary
+===================
+
+1. Attack Distribution:
+normal: 1891779
+rapid_request: 52129
+malicious_uri: 45372
+sql_injection: 682
+path_traversal: 279
+xss: 154
+suspicious_encoding: 18
+
+2. Top 5 Source IPs:
+10.252.252.57: 650765
+10.220.34.199: 340790
+10.220.34.198: 148018
+34.101.65.207: 66117
+182.253.45.146: 61645
+
+3. Status Code Distribution:
+200: 1304545
+404: 216016
+499: 208536
+405: 80201
+301: 57482
+403: 56364
+304: 40895
+302: 11558
+500: 5320
+503: 3294
+206: 2818
+502: 1976
+400: 537
+401: 525
+409: 57
+201: 19
+416: 9
+402: 4
+504: 2
+
+4. Brute Force Attempts:
+Total IPs detected: 259
+Top offending IPs:
+1.14.94.175: 20 failed attempts
+1.14.96.114: 19 failed attempts
+10.200.7.2: 26 failed attempts
+10.252.252.57: 18832 failed attempts
+10.252.252.90: 4027 failed attempts
+
+5. DoS Attempts:
+Total suspicious intervals: 469
+Sample of high-traffic intervals:
+10.252.252.57 at 2023-11-13 10:55:00: 114 requests/minute
+10.252.252.57 at 2023-11-13 11:01:00: 104 requests/minute
+10.252.252.57 at 2023-11-13 11:09:00: 101 requests/minute
+10.252.252.57 at 2023-11-13 11:14:00: 112 requests/minute
+10.252.252.57 at 2023-11-13 11:16:00: 119 requests/minute
