@@ -71,13 +71,13 @@ class LogAnalyzer:
         return attacks if attacks else ['normal']
 
     def detect_brute_force(self, df):
-        """Detect brute force attempts (slide 6)"""
+        """Detect brute force attempts"""
         # Group by IP and count failed attempts (401, 403)
         failed_attempts = df[df['status'].isin(['401', '403'])].groupby('ip').size()
         return failed_attempts[failed_attempts > 10]  # Threshold: 10 failed attempts
 
     def detect_dos(self, df):
-        """Detect DoS attempts (slide 6)"""
+        """Detect DoS attempts"""
         # Count requests per IP per minute
         df['minute'] = df['timestamp'].dt.floor('min')
         requests_per_minute = df.groupby(['ip', 'minute']).size()
